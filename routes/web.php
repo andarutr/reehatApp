@@ -29,10 +29,17 @@ Route::middleware('isAdmin')->group(function(){
         Route::get('/my-profile', 'AdminController@my_profile');
         Route::post('/my-profile', 'AdminController@my_profile_backend');
         Route::post('/ganti-password', 'AdminController@change_password_backend');
+        // WEBINAR
         Route::get('/webinar', 'AdminController@webinar_list');
         Route::get('/webinar/create', 'AdminController@webinar_create');
+        // ARTIKEL
         Route::get('/artikel', 'AdminController@artikel_list');
         Route::get('/artikel/create', 'AdminController@artikel_create');
+        Route::post('/artikel/create', 'AdminController@artikel_create_backend');
+        Route::get('/artikel/edit/{id}', 'AdminController@artikel_edit');
+        Route::post('/artikel/edit/{id}', 'AdminController@artikel_edit_backend');
+        Route::get('/artikel/delete/{id}', 'AdminController@artikel_delete_backend');
+        // PEMBAYARAN
         Route::get('/pembayaran', 'AdminController@payment_list');
     });
 });

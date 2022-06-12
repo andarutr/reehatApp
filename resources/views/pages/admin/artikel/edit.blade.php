@@ -1,12 +1,12 @@
 @extends('layouts.admin')
-@section('title','Create Artikel')
+@section('title','Edit Artikel')
 @section('content')
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12">
         <div class="dashboard_wrap">
             
             <div class="form_blocs_wrap">
-                <form action="/admin/artikel/create" method="POST" enctype="multipart/form-data">@csrf
+                <form action="/admin/artikel/edit/{{ $artikel->id }}" method="POST" enctype="multipart/form-data">@csrf
                     <div class="row justify-content-between">
                         <div class="col-lg-12 col-md-7 col-sm-12">
                                 
@@ -15,13 +15,13 @@
                                     
                                     <div class="form-group smalls">
                                         <label>Judul</label>
-                                        <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                                        <input type="text" class="form-control" name="title" value="{{ $artikel->title }}">
                                         @error('title')<p class="text-danger">{{ $message }}</p>@enderror
                                     </div>
                                     
                                     <div class="form-group smalls">
                                         <label>Description</label>
-                                        <textarea class="summernote" name="description">{{ old('description') }}</textarea>
+                                        <textarea class="summernote" name="description">{{ $artikel->description }}</textarea>
                                         @error('description')<p class="text-danger">{{ $message }}</p>@enderror
                                     </div>
 
@@ -30,10 +30,9 @@
                                         <div class="custom-file">
                                           <input type="file" class="custom-file-input" id="customFile" name="picture">
                                           <label class="custom-file-label" for="customFile">Choose file</label>
-                                          @error('picture')<p class="text-danger">{{ $message }}</p>@enderror
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary">Create</button>
+                                    <button class="btn btn-success">Edit</button>
                                 </div>
                             </div>
                         </div>

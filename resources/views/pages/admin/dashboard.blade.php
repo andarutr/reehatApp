@@ -6,28 +6,28 @@
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
         <div class="dashboard_stats_wrap">
             <div class="rounded-circle p-4 p-sm-4 d-inline-flex align-items-center justify-content-center theme-bg mb-2"><div class="position-absolute text-white h5 mb-0"><i class="fas fa-book"></i></div></div>
-            <div class="dashboard_stats_wrap_content"><h4>9</h4> <span>Artikel Tersedia</span></div>
+            <div class="dashboard_stats_wrap_content"><h4>{{ $article_count }}</h4> <span>Artikel Tersedia</span></div>
         </div>	
     </div>
     
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
         <div class="dashboard_stats_wrap">
             <div class="rounded-circle p-4 p-sm-4 d-inline-flex align-items-center justify-content-center bg-primary mb-2"><div class="position-absolute text-white h5 mb-0"><i class="fas fa-dollar-sign"></i></div></div>
-            <div class="dashboard_stats_wrap_content"><h4>1</h4> <span>Check Pembayaran</span></div>
+            <div class="dashboard_stats_wrap_content"><h4>{{ $payment_count }}</h4> <span>Check Pembayaran</span></div>
         </div>	
     </div>
     
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
         <div class="dashboard_stats_wrap">
             <div class="rounded-circle p-4 p-sm-4 d-inline-flex align-items-center justify-content-center bg-warning mb-2"><div class="position-absolute text-white h5 mb-0"><i class="fas fa-users"></i></div></div>
-            <div class="dashboard_stats_wrap_content"><h4>4</h4> <span>Pengguna Baru</span></div>
+            <div class="dashboard_stats_wrap_content"><h4>{{ $user_count }}</h4> <span>Pengguna Baru</span></div>
         </div>	
     </div>
     
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
         <div class="dashboard_stats_wrap">
             <div class="rounded-circle p-4 p-sm-4 d-inline-flex align-items-center justify-content-center bg-purple mb-2"><div class="position-absolute text-white h5 mb-0"><i class="fas fa-gem"></i></div></div>
-            <div class="dashboard_stats_wrap_content"><h4>5</h4> <span>Webinar Tersedia</span></div>
+            <div class="dashboard_stats_wrap_content"><h4>{{ $webinar_count }}</h4> <span>Webinar Tersedia</span></div>
         </div>	
     </div>
 
@@ -95,50 +95,19 @@
                 <h6>Pengguna Baru</h6>
             </div>
             <div class="ground-list ground-hover-list">
+                @foreach($new_user as $user)
                 <div class="ground ground-list-single">
                     <div class="rounded-circle p-3 p-sm-4 d-flex align-items-center justify-content-center bg-light-success">
-                        <div class="position-absolute text-success h5 mb-0"><i class="fas fa-user"></i></div>
+                        <div class="position-absolute text-success h5 mb-0"><img src="/assets/img/account/{{ $user->picture }}" class="img-fluid circle" width="60"></div>
                     </div>
 
                     <div class="ground-content">
-                        <h6><a href="#">Andaru Triadi</a></h6>
+                        <h6><a href="#">{{ $user->full_name }}</a></h6>
                         <small class="text-fade">Pengguna Baru</small>
-                        <span class="small">Bergabung pada 8 April 2022</span>
+                        <span class="small">Bergabung pada {{ $user->created_at }}</span>
                     </div>
                 </div>
-                <div class="ground ground-list-single">
-                    <div class="rounded-circle p-3 p-sm-4 d-flex align-items-center justify-content-center bg-light-success">
-                        <div class="position-absolute text-success h5 mb-0"><i class="fas fa-user"></i></div>
-                    </div>
-
-                    <div class="ground-content">
-                        <h6><a href="#">Syifa Octavia Damayanthi</a></h6>
-                        <small class="text-fade">Pengguna Baru</small>
-                        <span class="small">Bergabung pada 10 April 2022</span>
-                    </div>
-                </div>
-                <div class="ground ground-list-single">
-                    <div class="rounded-circle p-3 p-sm-4 d-flex align-items-center justify-content-center bg-light-success">
-                        <div class="position-absolute text-success h5 mb-0"><i class="fas fa-user"></i></div>
-                    </div>
-
-                    <div class="ground-content">
-                        <h6><a href="#">Farhan Ardiansyah</a></h6>
-                        <small class="text-fade">Pengguna Baru</small>
-                        <span class="small">Bergabung pada 9 April 2022</span>
-                    </div>
-                </div>
-                <div class="ground ground-list-single">
-                    <div class="rounded-circle p-3 p-sm-4 d-flex align-items-center justify-content-center bg-light-success">
-                        <div class="position-absolute text-success h5 mb-0"><i class="fas fa-user"></i></div>
-                    </div>
-
-                    <div class="ground-content">
-                        <h6><a href="#">Bagus Prio Utomo</a></h6>
-                        <small class="text-fade">Pengguna Baru</small>
-                        <span class="small">Bergabung pada 12 April 2022</span>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>		
     </div>

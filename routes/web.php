@@ -27,6 +27,8 @@ Route::middleware('isAdmin')->group(function(){
 	Route::group(['prefix' => '/admin'], function(){
         Route::get('/dashboard', 'AdminController@dashboard');
         Route::get('/my-profile', 'AdminController@my_profile');
+        Route::post('/my-profile', 'AdminController@my_profile_backend');
+        Route::post('/ganti-password', 'AdminController@change_password_backend');
         Route::get('/webinar', 'AdminController@webinar_list');
         Route::get('/webinar/create', 'AdminController@webinar_create');
         Route::get('/artikel', 'AdminController@artikel_list');

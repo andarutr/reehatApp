@@ -120,20 +120,18 @@
                         <li>
                             <div class="btn-group account-drop">
                                 <a href="javascript:void(0);" class="crs_yuo12 btn btn-order-by-filt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="https://via.placeholder.com/500x500" class="avater-img" alt="">
+                                    <img src="/assets/img/account/{{ Auth::user()->picture }}" class="avater-img" alt="">
                                 </a>
                                 <div class="dropdown-menu pull-right animated flipInX">
                                     <div class="drp_menu_headr">
-                                        <h4>Hi, Daniel</h4>
+                                        <h4>Hi, {{ Auth::user()->full_name }}</h4>
                                     </div>
                                     <ul>
-                                        <li><a href="dashboard.html"><i class="fa fa-tachometer-alt"></i>Dashboard<span class="notti_coun style-1">4</span></a></li>                                  
-                                        <li><a href="my-profile.html"><i class="fa fa-admin-tie"></i>My Profile</a></li>                                 
-                                        <li><a href="manage-course.html"><i class="fas fa-shopping-basket"></i>Manage Courses<span class="notti_coun style-2">7</span></a></li>
-                                        <li><a href="manage-instructor.html"><i class="fas fa-toolbox"></i>Manage Instructor</a></li>
-                                        <li><a href="manage-students.html"><i class="fa fa-envelope"></i>Manage Students<span class="notti_coun style-3">3</span></a></li>
-                                        <li><a href="messages.html"><i class="fas fa-comments"></i>Messages</a></li>
-                                        <li><a href="/auth/login"><i class="fa fa-unlock-alt"></i>Logout</a></li>
+                                        <li><a href="/admin/my-profile"><i class="fas fa-address-card"></i>My Profile</a></li>
+                                        <li><a href="/admin/webinar"><i class="fas fa-gem"></i>Webinar</a></li>
+                                        <li><a href="/admin/artikel"><i class="fas fa-book"></i>Artikel</a></li>
+                                        <li><a href="/admin/pembayaran"><i class="fas fa-dollar-sign"></i>Check Pembayaran</a></li>
+                                        <li><a href="/auth/logout"><i class="fa fa-unlock-alt"></i>Logout</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -170,11 +168,11 @@
                     <li>
                         <div class="btn-group account-drop">
                             <a href="javascript:void(0);" class="crs_yuo12 btn btn-order-by-filt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="/assets/img/side-2.png" class="avater-img" alt="">
+                                <img src="/assets/img/account/{{ Auth::user()->picture }}" class="avater-img" alt="">
                             </a>
                             <div class="dropdown-menu pull-right animated flipInX">
                                 <div class="drp_menu_headr">
-                                    <h4>Hi, ReehatSys</h4>
+                                    <h4>Hi, {{ Auth::user()->full_name }}</h4>
                                 </div>
                                 <ul>
                                     <li><a href="/admin/my-profile"><i class="fas fa-address-card"></i>My Profile</a></li>

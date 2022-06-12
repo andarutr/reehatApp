@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Webinar extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+    public $timestamps = FALSE;
 }

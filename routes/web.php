@@ -63,10 +63,12 @@ Route::middleware('isUser')->group(function(){
         Route::get('/time-management/delete/{id}', 'UserController@time_management_delete');
         Route::get('/time-management/{aplikasi}', 'UserController@time_management_app');
         Route::get('/webinar', 'UserController@webinar_list');
+        Route::get('/webinar/{url}', 'UserController@webinar_detail');
         Route::get('/pembayaran', 'UserController@payment');
         Route::get('/pembayaran/{url}', 'UserController@payment_backend');
         Route::get('/detail-webinar', 'UserController@webinar_detail');
         Route::get('/artikel', 'UserController@artikel_list');
         Route::get('/artikel/{url}', 'UserController@artikel_detail');
+        Route::get('/purchase', 'UserController@purchase_list');
     });
 });

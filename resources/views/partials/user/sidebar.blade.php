@@ -21,6 +21,7 @@
                 <li class="@if($menu == 'Time Management') active @endif"><a href="/user/time-management"><i class="fas fa-layer-group"></i>Time Management</a></li>
                 <li class="@if($menu == 'Webinar') active @endif"><a href="/user/webinar"><i class="fas fa-gem"></i>Webinar</a></li>
                 <li class="@if($menu == 'Artikel') active @endif"><a href="/user/artikel"><i class="fas fa-book"></i>Artikel</a></li>
+                <li class="@if($menu == 'Purchase') active @endif"><a href="/user/purchase"><i class="fas fa-dollar-sign"></i>Purchase</a></li>
             </ul>
         </div>
         

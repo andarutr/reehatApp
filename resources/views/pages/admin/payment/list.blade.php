@@ -28,9 +28,13 @@
                             <tbody>
                                 @foreach($payments as $payment)
                                 <tr>
-                                    <td><img src="/assets/img/pengguna/{{ $payment->picture }}" class="img-fluid" width="60" alt="" /></td>
+                                    <td>
+                                        <a href="/assets/img/account/{{ $payment->picture_user }}" data-fancybox>
+                                            <img src="/assets/img/account/{{ $payment->picture_user }}" class="img-fluid" width="60" alt="" />
+                                        </a>
+                                    </td>
                                     <td><div class="smalls lg">{{ $payment->name_user }}</div></td>
-                                    <td><div class="smalls lg">{{ $payment->picture_user }}</div></td>
+                                    <td><div class="smalls lg">{{ $payment->webinar }}</div></td>
                                     <td><span class="smalls lg">{{ $payment->cost }}</span></td>
                                     <td><span class="smalls lg">{{ $payment->status }}</span></td>
                                     <td><span class="smalls lg">{{ $payment->created_at }}</span></td>

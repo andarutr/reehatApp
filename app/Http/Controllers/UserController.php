@@ -81,7 +81,7 @@ class UserController extends Controller
             'updated_at' => date('d F Y'),
             'created_at' => date('d F Y'),
         ]);
-        
+
         Alert::success('Berhasil', 'Berhasil tambah data!');
         return redirect('/user/time-management/'.$req->aplikasi);
     }
@@ -103,10 +103,14 @@ class UserController extends Controller
         return view('pages.user.webinar.list', compact('menu','webinars','payment_count','payment_nav'));
     }
 
-    public function webinar_detail()
+    public function webinar_detail($url)
     {
         $menu = 'Webinar';
-        return view('pages.user.webinar.detail', compact('menu'));
+        $payment_count = Payment::where('name_user', Auth::user()->full_name)->count();
+        $payment_nav = Payment::orderByDesc('id')->get();
+        $webinar = Webinar::where('url',$url)->first();
+
+        return view('pages.user.webinar.detail', compact('menu','payment_count','payment_nav','webinar'));
     }
 
     public function artikel_list()
@@ -143,11 +147,13 @@ class UserController extends Controller
         $webinar = Webinar::where('url',$url)->first();
 
         Payment::create([
+            'user_id' => Auth::user()->id,
             'webinar' => $webinar->title,
             'cost' => $webinar->cost,
             'name_user' => Auth::user()->full_name,
             'picture_user' => Auth::user()->picture,
             'status' => 'Belum Bayar',
+            'url' => \Str::slug($webinar->title),
             'updated_at' => date('d F Y'),
             'created_at' => date('d F Y'),
         ]);
@@ -219,5 +225,16 @@ class UserController extends Controller
             Alert::error('Gagal', 'Password anda salah!');
             return redirect()->back();
         }
+    }
+
+    // PURCHASE
+    public function purchase_list()
+    {
+        $menu = 'Purchase';
+        $payment_count = Payment::where('name_user', Auth::user()->full_name)->count();
+        $payment_nav = Payment::orderByDesc('id')->get();
+        $webinars = Payment::where('user_id', Auth::user()->id)->orderByDesc('id')->paginate(6);
+
+        return view('pages.user.purchase', compact('menu','payment_count','payment_nav','webinars'));
     }
 }

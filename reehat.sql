@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Jun 2022 pada 15.09
+-- Waktu pembuatan: 12 Jun 2022 pada 16.05
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 7.4.21
 
@@ -60,11 +60,13 @@ INSERT INTO `articles` (`id`, `title`, `description`, `picture`, `url`, `updated
 
 CREATE TABLE `payments` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `webinar` varchar(128) NOT NULL,
   `cost` int(11) NOT NULL,
   `name_user` varchar(128) NOT NULL,
   `picture_user` varchar(128) NOT NULL,
   `status` varchar(25) NOT NULL,
+  `url` varchar(128) NOT NULL,
   `updated_at` varchar(25) NOT NULL,
   `created_at` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -73,10 +75,8 @@ CREATE TABLE `payments` (
 -- Dumping data untuk tabel `payments`
 --
 
-INSERT INTO `payments` (`id`, `webinar`, `cost`, `name_user`, `picture_user`, `status`, `updated_at`, `created_at`) VALUES
-(1, 'Mengatasi Stress Akibat Tekanan Kerja', 85000, 'Melda Yusnita', 'melda.jpeg', 'Belum Bayar', '12 June 2022', '12 June 2022'),
-(2, 'Menuju Hidup Produktif Dan Sehat Mental', 85000, 'Melda Yusnita', 'melda.jpeg', 'Belum Bayar', '12 June 2022', '12 June 2022'),
-(3, 'Mengatasi Trauma Inner Child', 85000, 'Melda Yusnita', 'melda.jpeg', 'Belum Bayar', '12 June 2022', '12 June 2022');
+INSERT INTO `payments` (`id`, `user_id`, `webinar`, `cost`, `name_user`, `picture_user`, `status`, `url`, `updated_at`, `created_at`) VALUES
+(1, 2, 'Mengatasi Trauma Inner Child', 85000, 'Melda Yusnita', 'melda.jpeg', 'Belum Bayar', 'mengatasi-trauma-inner-child', '12 June 2022', '12 June 2022');
 
 -- --------------------------------------------------------
 
@@ -234,7 +234,7 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT untuk tabel `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `roles`

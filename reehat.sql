@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Jun 2022 pada 06.09
+-- Waktu pembuatan: 12 Jun 2022 pada 08.52
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 7.4.21
 
@@ -124,13 +124,24 @@ CREATE TABLE `webinars` (
   `title` varchar(128) NOT NULL,
   `thumbnail` varchar(128) NOT NULL,
   `description` text NOT NULL,
-  `mentor` varchar(25) NOT NULL,
+  `mentor` varchar(128) NOT NULL,
   `cost` int(11) NOT NULL,
   `video_url` varchar(128) NOT NULL,
   `url` varchar(128) NOT NULL,
   `updated_at` varchar(25) NOT NULL,
   `created_at` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `webinars`
+--
+
+INSERT INTO `webinars` (`id`, `title`, `thumbnail`, `description`, `mentor`, `cost`, `video_url`, `url`, `updated_at`, `created_at`) VALUES
+(1, 'Mengatasi Stress Akibat Tekanan Kerja', 'webinar_1.png', '<p>Coming Soon!</p>', 'Ghassani Salsabila, S.Psi', 85000, 'https://www.youtube.com/embed/DGUdLn0KBms', 'mengatasi-stress-akibat-tekanan-kerja', '12 June 2022', '12 June 2022'),
+(2, 'Menuju Hidup Produktif Dan Sehat Mental', 'webinar_2.png', '<p>Coming Soon!</p>', 'Shabrina Fitriandari, M.Psi', 85000, 'https://www.youtube.com/embed/DGUdLn0KBms', 'menuju-hidup-produktif-dan-sehat-mental', '12 June 2022', '12 June 2022'),
+(3, 'Melatih Emosi Dan Amarahmu Sebaik Mungkin', 'webinar_3.png', '<p>Coming Soon!</p>', 'Fadhilah Eryanda, M.PSi', 85000, 'https://www.youtube.com/embed/DGUdLn0KBms', 'melatih-emosi-dan-amarahmu-sebaik-mungkin', '12 June 2022', '12 June 2022'),
+(4, 'Mengatasi Sifat Perfeksionis Dan Merubahnya Menjadi Potensi', 'webinar_4.png', '<p>Coming Soon!</p>', 'Fionna Callista, S.Psi', 85000, 'https://www.youtube.com/embed/DGUdLn0KBms', 'mengatasi-sifat-perfeksionis-dan-merubahnya-menjadi-potensi', '12 June 2022', '12 June 2022'),
+(5, 'Mengatasi Trauma Inner Child', 'webinar_5.png', '<p>Coming Soon!</p>', 'Durah Amajida, S.Psi', 85000, 'https://www.youtube.com/embed/DGUdLn0KBms', 'mengatasi-trauma-inner-child', '12 June 2022', '12 June 2022');
 
 --
 -- Indexes for dumped tables
@@ -198,7 +209,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `webinars`
 --
 ALTER TABLE `webinars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -35,13 +35,23 @@ class AdminController extends Controller
     public function webinar_list()
     {
         $menu = 'Webinar';
-        return view('pages.admin.webinar.list', compact('menu'));
+        $webinars = Webinar::orderByDesc('id')->paginate(5);
+
+        return view('pages.admin.webinar.list', compact('menu','webinars'));
     }
 
     public function webinar_create()
     {
         $menu = 'Webinar';
         return view('pages.admin.webinar.create', compact('menu'));
+    }
+
+    public function webinar_edit($id)
+    {
+        $menu = 'Webinar';
+        $webinar = Webinar::where('id',$id)->first();
+
+        return view('pages.admin.webinar.edit', compact('menu','webinar'));
     }
 
     public function artikel_list()
@@ -69,7 +79,9 @@ class AdminController extends Controller
     public function payment_list()
     {
         $menu = 'Check Pembayaran';
-        return view('pages.admin.payment.list', compact('menu'));
+        $payments = Payment::orderByDesc('id')->paginate('5');
+
+        return view('pages.admin.payment.list', compact('menu','payments'));
     }
 
     // MY PROFILE
@@ -136,6 +148,94 @@ class AdminController extends Controller
             return redirect()->back();
         }
     } 
+
+    // WEBINAR
+    public function webinar_create_backend(Request $req)
+    {
+        $this->validate($req, [
+            'title' => 'required',
+            'mentor' => 'required',
+            'cost' => 'required',
+            'video_url' => 'required',
+            'description' => 'required',
+            'thumbnail' => 'required',
+        ]);
+
+        $file = $req->file('thumbnail');
+        $img = \Image::make($file);
+        $img->fit(300, 191);
+        $img->save('assets/img/webinar/'. $file->getClientOriginalName());
+
+        Webinar::create([
+            'title' => $req->title,
+            'mentor' => $req->mentor,
+            'cost' => $req->cost,
+            'video_url' => $req->video_url,
+            'description' => $req->description,
+            'thumbnail' => $file->getClientOriginalName(),
+            'url' => \Str::slug($req->title),
+            'updated_at' => date('d F Y'),
+            'created_at' => date('d F Y'),
+        ]);
+
+        Alert::success('Berhasil', 'Berhasil menambahkan webinar!');
+        return redirect('/admin/webinar');
+    }
+
+    public function webinar_edit_backend(Request $req, $id)
+    {
+        $this->validate($req, [
+            'title' => 'required',
+            'mentor' => 'required',
+            'cost' => 'required',
+            'video_url' => 'required',
+            'description' => 'required',
+        ]);
+
+        if($req->hasFile('picture'))
+        {
+            $file = $req->file('thumbnail');
+            $img = \Image::make($file);
+            $img->fit(300, 191);
+            $img->save('assets/img/webinar/'. $file->getClientOriginalName());
+
+            Webinar::where('id', $id)
+                    ->update([
+                        'title' => $req->title,
+                        'mentor' => $req->mentor,
+                        'cost' => $req->cost,
+                        'video_url' => $req->video_url,
+                        'description' => $req->description,
+                        'thumbnail' => $file->getClientOriginalName(),
+                        'url' => \Str::slug($req->title),
+                        'updated_at' => date('d F Y'),
+                    ]);
+
+            Alert::success('Berhasil', 'Berhasil memperbarui webinar!');
+            return redirect('/admin/webinar');
+        }else{
+            Webinar::where('id', $id)
+                    ->update([
+                        'title' => $req->title,
+                        'mentor' => $req->mentor,
+                        'cost' => $req->cost,
+                        'video_url' => $req->video_url,
+                        'description' => $req->description,
+                        'url' => \Str::slug($req->title),
+                        'updated_at' => date('d F Y'),
+                    ]);
+
+            Alert::success('Berhasil', 'Berhasil memperbarui webinar!');
+            return redirect('/admin/webinar');  
+        }
+    }
+
+    protected function webinar_delete_backend(Request $req, $id)
+    {   
+        Webinar::where('id',$id)->delete();
+        Alert::success('Berhasil', 'Berhasil menghapus webinar!');
+        return redirect('/admin/webinar');
+    }
 
     // ARTIKEL
     public function artikel_create_backend(Request $req)

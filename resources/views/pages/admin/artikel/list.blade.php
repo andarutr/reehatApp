@@ -37,7 +37,7 @@
                                             </a>
                                             <div class="drp-select dropdown-menu">
                                                 <a class="dropdown-item" href="/admin/artikel/edit/{{ $artikel->id }}">Edit</a>
-                                                <a class="dropdown-item" href="/admin/artikel/delete/{{ $artikel->id }}">Delete</a>
+                                                <a class="dropdown-item" href="/admin/artikel/delete/{{ $artikel->id }}" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
                                             </div>
                                         </div>
                                     </td>

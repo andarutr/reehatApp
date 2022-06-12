@@ -32,6 +32,10 @@ Route::middleware('isAdmin')->group(function(){
         // WEBINAR
         Route::get('/webinar', 'AdminController@webinar_list');
         Route::get('/webinar/create', 'AdminController@webinar_create');
+        Route::post('/webinar/create', 'AdminController@webinar_create_backend');
+        Route::get('/webinar/edit/{id}', 'AdminController@webinar_edit');
+        Route::post('/webinar/edit/{id}', 'AdminController@webinar_edit_backend');
+        Route::get('/webinar/delete/{id}', 'AdminController@webinar_delete_backend');
         // ARTIKEL
         Route::get('/artikel', 'AdminController@artikel_list');
         Route::get('/artikel/create', 'AdminController@artikel_create');

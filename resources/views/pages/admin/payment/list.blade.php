@@ -16,7 +16,6 @@
                         <table class="table dash_list">
                             <thead>
                                 <tr>
-                                    <th scope="col">No</th>
                                     <th scope="col">Photo</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">Pesanan</th>
@@ -27,25 +26,26 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($payments as $payment)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td><img src="/assets/img/pengguna/melda.jpeg" class="img-fluid" width="60" alt="" /></td>
-                                    <td><div class="smalls lg">Melda Yusnita</div></td>
-                                    <td><div class="smalls lg">Mengatasi Stress Akibat Tekanan Kerja</div></td>
-                                    <td><span class="smalls lg">Rp85.000,-</span></td>
-                                    <td><span class="smalls lg">Belum Bayar</span></td>
-                                    <td><span class="smalls lg">18 Juni 2022</span></td>
+                                    <td><img src="/assets/img/pengguna/{{ $payment->picture }}" class="img-fluid" width="60" alt="" /></td>
+                                    <td><div class="smalls lg">{{ $payment->name_user }}</div></td>
+                                    <td><div class="smalls lg">{{ $payment->picture_user }}</div></td>
+                                    <td><span class="smalls lg">{{ $payment->cost }}</span></td>
+                                    <td><span class="smalls lg">{{ $payment->status }}</span></td>
+                                    <td><span class="smalls lg">{{ $payment->created_at }}</span></td>
                                     <td>
                                         <div class="dropdown show">
                                             <a class="btn btn-action" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-h"></i>
                                             </a>
                                             <div class="drp-select dropdown-menu">
-                                                <a class="dropdown-item" href="JavaScript:Void(0);">Delete</a>
+                                                <a class="dropdown-item" href="/admin/pembayaran/delete/{{ $payment->id }}" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

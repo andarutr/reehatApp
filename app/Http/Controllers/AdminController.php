@@ -20,8 +20,9 @@ class AdminController extends Controller
         $webinar_count = Webinar::count();
         $payment_count = Payment::count();
         $new_user = User::orderByDesc('id')->limit(5)->get();
+        $webinars = Webinar::orderByDesc('id')->limit(5)->get();
 
-        return view('pages.admin.dashboard', compact('menu','article_count','user_count','webinar_count','payment_count','new_user'));
+        return view('pages.admin.dashboard', compact('menu','article_count','user_count','webinar_count','payment_count','new_user','webinars'));
     }
 
     public function my_profile()
@@ -308,5 +309,13 @@ class AdminController extends Controller
         Article::where('id',$id)->delete();
         Alert::success('Berhasil', 'Berhasil menghapus artikel!');
         return redirect('/admin/artikel');
+    }
+
+    // PAYMENT
+    protected function payment_delete_backend($id)
+    {
+        Payment::where('id',$id)->delete();
+        Alert::success('Berhasil', 'Berhasil menghapus payment!');
+        return redirect('/admin/pembayaran');
     }
 }

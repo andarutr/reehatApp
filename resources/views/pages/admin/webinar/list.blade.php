@@ -27,7 +27,7 @@
                             <tbody>
                                 @foreach($webinars as $webinar)
                                 <tr>
-                                    <td><img src="/assets/img/webinar/{{ $webinar->thumbnail }}" class="img-fluid" width="80" alt="" /></td>
+                                    <td><a href="/assets/img/webinar/{{ $webinar->thumbnail }}" data-fancybox><img src="/assets/img/webinar/{{ $webinar->thumbnail }}" class="img-fluid" width="80" alt="" /></a></td>
                                     <td><div class="smalls lg">{{ $webinar->title }}</div></td>
                                     <td><div class="smalls lg">{{ $webinar->mentor }}</div></td>
                                     <td><span class="smalls lg">{{ $webinar->updated_at }}</span></td>

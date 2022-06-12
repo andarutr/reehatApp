@@ -40,51 +40,19 @@
                 <h5>Webinar Terbaru</h5>										
             </div>
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                @foreach($webinars as $webinar)
                 <div class="grousp_crs">
-                    <img src="/assets/img/webinar/webinar_1.png" class="img-fluid mr-3" width="125" />
+                    <a href="/assets/img/webinar/{{ $webinar->thumbnail }}" data-fancybox>
+                        <img src="/assets/img/webinar/{{ $webinar->thumbnail }}" class="img-fluid mr-3" width="125" />
+                    </a>
                     <div class="grousp_crs_left">
-                        <div class="grousp_crs_caption"><h4>Mengatasi Stress Akibat Tekanan Kerja</h4><br>Satu Persen</div>
+                        <div class="grousp_crs_caption"><h4>{{ $webinar->title }}</h4><br>{{ $webinar->mentor }}</div>
                     </div>
                     <div class="grousp_crs_right">
                         <div class="frt_but"><a href="#" class="btn text-white theme-bg">Lihat</a></div>
                     </div>
                 </div>
-                <div class="grousp_crs">
-                    <img src="/assets/img/webinar/webinar_2.png" class="img-fluid mr-3" width="125" />
-                    <div class="grousp_crs_left">
-                        <div class="grousp_crs_caption"><h4>Menuju Hidup yang Produktif dan Sehat Mental</h4><br>Satu Persen</div>
-                    </div>
-                    <div class="grousp_crs_right">
-                        <div class="frt_but"><a href="#" class="btn text-white theme-bg">Lihat</a></div>
-                    </div>
-                </div>
-                <div class="grousp_crs">
-                    <img src="/assets/img/webinar/webinar_3.png" class="img-fluid mr-3" width="125" />
-                    <div class="grousp_crs_left">
-                        <div class="grousp_crs_caption"><h4>Melatih Emosi dan Amarah Sebaik Mungkin</h4><br>Satu Persen</div>
-                    </div>
-                    <div class="grousp_crs_right">
-                        <div class="frt_but"><a href="#" class="btn text-white theme-bg">Lihat</a></div>
-                    </div>
-                </div>
-                <div class="grousp_crs">
-                    <img src="/assets/img/webinar/webinar_4.png" class="img-fluid mr-3" width="125" />
-                    <div class="grousp_crs_left">
-                        <div class="grousp_crs_caption"><h4>Mengatasi Sifat Perfeksionis dan Mengubahnya Menjadi Potensi</h4><br>Satu Persen</div>
-                    </div>
-                    <div class="grousp_crs_right">
-                        <div class="frt_but"><a href="#" class="btn text-white theme-bg">Lihat</a></div>
-                    </div>
-                </div>
-                <div class="grousp_crs">
-                    <img src="/assets/img/webinar/webinar_5.png" class="img-fluid mr-3" width="125" />
-                    <div class="grousp_crs_left">
-                        <div class="grousp_crs_caption"><h4>Mengatasi Trauma Inner Child</h4><br>Satu Persen</div>
-                    </div>
-                    <div class="grousp_crs_right">
-                        <div class="frt_but"><a href="#" class="btn text-white theme-bg">Lihat</a></div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

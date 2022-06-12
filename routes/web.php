@@ -45,6 +45,7 @@ Route::middleware('isAdmin')->group(function(){
         Route::get('/artikel/delete/{id}', 'AdminController@artikel_delete_backend');
         // PEMBAYARAN
         Route::get('/pembayaran', 'AdminController@payment_list');
+        Route::get('/pembayaran/delete/{id}', 'AdminController@payment_delete_backend');
     });
 });
 
@@ -53,13 +54,19 @@ Route::middleware('isUser')->group(function(){
 	Route::group(['prefix' => '/user'], function(){
         Route::get('/dashboard', 'UserController@dashboard');
         Route::get('/my-profile', 'UserController@my_profile');
+        Route::post('/my-profile', 'UserController@my_profile_backend');
+        Route::post('/ganti-password', 'UserController@change_password_backend');
+
         Route::get('/time-management', 'UserController@time_management');
-        Route::get('/time-management/instagram', 'UserController@time_management_ig');
         Route::get('/time-management/create', 'UserController@time_management_create');
+        Route::post('/time-management/create', 'UserController@time_management_create_backend');
+        Route::get('/time-management/delete/{id}', 'UserController@time_management_delete');
+        Route::get('/time-management/{aplikasi}', 'UserController@time_management_app');
         Route::get('/webinar', 'UserController@webinar_list');
         Route::get('/pembayaran', 'UserController@payment');
+        Route::get('/pembayaran/{url}', 'UserController@payment_backend');
         Route::get('/detail-webinar', 'UserController@webinar_detail');
         Route::get('/artikel', 'UserController@artikel_list');
-        Route::get('/detail-artikel', 'UserController@artikel_detail');
+        Route::get('/artikel/{url}', 'UserController@artikel_detail');
     });
 });

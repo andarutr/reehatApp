@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Jun 2022 pada 08.52
+-- Waktu pembuatan: 12 Jun 2022 pada 15.09
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 7.4.21
 
@@ -69,6 +69,15 @@ CREATE TABLE `payments` (
   `created_at` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `payments`
+--
+
+INSERT INTO `payments` (`id`, `webinar`, `cost`, `name_user`, `picture_user`, `status`, `updated_at`, `created_at`) VALUES
+(1, 'Mengatasi Stress Akibat Tekanan Kerja', 85000, 'Melda Yusnita', 'melda.jpeg', 'Belum Bayar', '12 June 2022', '12 June 2022'),
+(2, 'Menuju Hidup Produktif Dan Sehat Mental', 85000, 'Melda Yusnita', 'melda.jpeg', 'Belum Bayar', '12 June 2022', '12 June 2022'),
+(3, 'Mengatasi Trauma Inner Child', 85000, 'Melda Yusnita', 'melda.jpeg', 'Belum Bayar', '12 June 2022', '12 June 2022');
+
 -- --------------------------------------------------------
 
 --
@@ -87,6 +96,34 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id`, `role`) VALUES
 (1, 'admin'),
 (2, 'user');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `time_management`
+--
+
+CREATE TABLE `time_management` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `aplikasi` varchar(25) NOT NULL,
+  `batas_penggunaan` varchar(25) NOT NULL,
+  `periode` varchar(128) NOT NULL,
+  `updated_at` varchar(25) NOT NULL,
+  `created_at` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `time_management`
+--
+
+INSERT INTO `time_management` (`id`, `user_id`, `aplikasi`, `batas_penggunaan`, `periode`, `updated_at`, `created_at`) VALUES
+(1, 2, 'instagram', '5 jam', 'januari - maret', '12 June 2022', '12 June 2022'),
+(2, 2, 'youtube', '5 jam', 'januari - maret', '12 June 2022', '12 June 2022'),
+(4, 2, 'facebook', '5 jam', 'januari - maret', '12 June 2022', '12 June 2022'),
+(5, 2, 'whatsapp', '5 jam', 'januari - maret', '12 June 2022', '12 June 2022'),
+(6, 2, 'whatsapp', '2 Jam', 'April - May', '12 June 2022', '12 June 2022'),
+(7, 2, 'tiktok', '4 Jam', 'April - May', '12 June 2022', '12 June 2022');
 
 -- --------------------------------------------------------
 
@@ -166,6 +203,12 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `time_management`
+--
+ALTER TABLE `time_management`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
@@ -191,13 +234,19 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT untuk tabel `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `time_management`
+--
+ALTER TABLE `time_management`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

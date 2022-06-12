@@ -33,7 +33,7 @@
                         <div class="th_sety_caption">
                             <h5>Youtube</h5>
                             <div class="sedi_09">Set your time</div>
-                            <a href="#" class="them_sct active mt-4 mb-2"><i class="fas fa-home mr-1"></i>Buat Schedule</a>
+                            <a href="/user/time-management/youtube" class="them_sct active mt-4 mb-2"><i class="fas fa-home mr-1"></i>Buat Schedule</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                         <div class="th_sety_caption">
                             <h5>Tiktok</h5>
                             <div class="sedi_09">Set your time</div>
-                            <a href="#" class="them_sct active mt-4 mb-2"><i class="fas fa-home mr-1"></i>Buat Schedule</a>
+                            <a href="/user/time-management/tiktok" class="them_sct active mt-4 mb-2"><i class="fas fa-home mr-1"></i>Buat Schedule</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <div class="th_sety_caption">
                             <h5>Facebook</h5>
                             <div class="sedi_09">Set your time</div>
-                            <a href="#" class="them_sct active mt-4 mb-2"><i class="fas fa-home mr-1"></i>Buat Schedule</a>
+                            <a href="/user/time-management/facebook" class="them_sct active mt-4 mb-2"><i class="fas fa-home mr-1"></i>Buat Schedule</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <div class="th_sety_caption">
                             <h5>Whatsapp</h5>
                             <div class="sedi_09">Set your time</div>
-                            <a href="#" class="them_sct active mt-4 mb-2"><i class="fas fa-home mr-1"></i>Buat Schedule</a>
+                            <a href="/user/time-management/whatsapp" class="them_sct active mt-4 mb-2"><i class="fas fa-home mr-1"></i>Buat Schedule</a>
                         </div>
                     </div>
                 </div>

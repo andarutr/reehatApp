@@ -26,7 +26,7 @@
                             <tbody>
                                 @foreach($articles as $artikel)
                                 <tr>
-                                    <td><img src="/assets/img/artikel/{{ $artikel->picture }}" class="img-fluid" width="80" alt="" /></td>
+                                    <td><a href="/assets/img/artikel/{{ $artikel->picture }}" data-fancybox><img src="/assets/img/artikel/{{ $artikel->picture }}" class="img-fluid" width="80" alt="" /></a></td>
                                     <td><div class="smalls lg">{{ $artikel->title }}</div></td>
                                     <td><span class="smalls lg">{{ $artikel->updated_at }}</span></td>
                                     <td><span class="smalls lg">{{ $artikel->created_at }}</span></td>

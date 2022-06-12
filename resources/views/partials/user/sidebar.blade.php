@@ -1,8 +1,8 @@
 <div class="col-lg-3 col-md-3">
     <div class="dashboard-navbar">
         <div class="d-user-avater">
-            <img src="/assets/img/pengguna/melda.jpeg" class="img-fluid avater" width="250" height="250">
-            <h4>Melda Yusnita</h4>
+            <img src="/assets/img/account/{{ Auth::user()->picture }}" class="img-fluid avater" width="250" height="250">
+            <h4>{{ Auth::user()->full_name }}</h4>
             <span>Pengguna</span>
             <div class="elso_syu89">
                 <ul>

@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/andarutr/reehatAppWP2/raw/main/public/assets/img/reehat_logo.png" width="150"/>
+    <img src="https://github.com/andarutr/reehatApp/raw/main/public/assets/img/reehat_logo.png" width="150"/>
 </p>
 
 ## Deskripsi

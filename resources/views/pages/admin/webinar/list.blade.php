@@ -38,8 +38,10 @@
                                                 <i class="fas fa-ellipsis-h"></i>
                                             </a>
                                             <div class="drp-select dropdown-menu">
-                                                <a class="dropdown-item" href="/admin/webinar/edit/{{ $webinar->id }}">Edit</a>
-                                                <a class="dropdown-item" href="/admin/webinar/delete/{{ $webinar->id }}" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
+                                                <a class="dropdown-item" href="/admin/webinar/{{ $webinar->id }}/edit">Edit</a>
+                                                <form action="/admin/webinar/{{ $webinar->id }}" method="POST">@csrf @method('delete')
+                                                    <button class="dropdown-item" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </td>

@@ -33,7 +33,9 @@
                                     <td><span class="smalls lg">{{ $time->updated_at }}</span></td>
                                     <td><span class="smalls lg">{{ $time->created_at }}</span></td>
                                     <td>
-                                        <a href="/user/time-management/delete/{{ $time->id }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data?')"><i class="fas fa-trash"></i></a>
+                                        <form action="/user/time-management/{{ $time->id }}" method="POST">@csrf @method('delete')
+                                            <button class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data?')"><i class="fas fa-trash"></i></button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach

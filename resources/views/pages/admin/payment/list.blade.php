@@ -44,7 +44,9 @@
                                                 <i class="fas fa-ellipsis-h"></i>
                                             </a>
                                             <div class="drp-select dropdown-menu">
-                                                <a class="dropdown-item" href="/admin/pembayaran/delete/{{ $payment->id }}" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
+                                                <form action="/admin/pembayaran/{{ $payment->id }}" method="POST">@csrf @method('delete')
+                                                    <button class="dropdown-item" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </td>

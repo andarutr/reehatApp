@@ -9,13 +9,13 @@
                 <center>
                     <img src="/assets/img/pie-chart.png" class="img-fluid" width="200" />
                 </center>
-                <a href="/auth/login/pengurus" class="btn full-width btn-md theme-bg text-white">PENGURUS</a>
+                <a href="/login" class="btn full-width btn-md theme-bg text-white">PENGURUS</a>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                 <center>
                     <img src="/assets/img/user.png" class="img-fluid" width="200" />
                 </center>
-                <a href="/auth/login/pengguna" class="btn full-width btn-md theme-bg text-white">PENGGUNA</a>
+                <a href="/login" class="btn full-width btn-md theme-bg text-white">PENGGUNA</a>
             </div>
         </div>
         <br><br><br><br><br>

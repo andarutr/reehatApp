@@ -14,23 +14,18 @@ class AuthController extends Controller
         return view('pages.auth.first_page');
     }
 
-    public function login_pengurus()
+    public function login()
     {
-        return view('pages.auth.login_pengurus');
+        return view('pages.auth.login');
     }
 
-    public function login_pengguna()
+    public function register()
     {
-        return view('pages.auth.login_pengguna');
-    }
-
-    public function register_pengguna()
-    {
-        return view('pages.auth.register_pengguna');
+        return view('pages.auth.register');
     }
 
     // LOGIN
-    public function login_backend(Request $req)
+    public function proses_login(Request $req)
     {
         $this->validate($req, [
             'email' => 'required',
@@ -44,13 +39,12 @@ class AuthController extends Controller
                 return redirect('/user/dashboard');
             }
         }else{
-            Alert::error('Gagal', 'Email dan password salah!');
             return redirect()->back();
         }
     }
 
     // REGISTER
-    public function register_backend(Request $req)
+    public function proses_register(Request $req)
     {
         $this->validate($req, [
             'full_name' => 'required',
@@ -68,20 +62,18 @@ class AuthController extends Controller
             'updated_at' => date('d F Y'),
             'created_at' => date('d F Y'),
         ]);
-        Alert::success('Berhasil', 'Anda telah berhasil registrasi!');
-        return redirect('/auth/login/pengguna');
+
+        return redirect('/login');
     }
 
-    public function logout()
+    public function destroy()
     {
         if(Auth::user()->role_id == 1){
             Auth::logout();
-            Alert::success('Berhasil', 'Anda telah logout!');
-            return redirect('/auth/login/pengurus');
+            return redirect('/login');
         }elseif(Auth::user()->role_id == 2){
             Auth::logout();
-            Alert::success('Berhasil', 'Anda telah logout!');
-            return redirect('/auth/login/pengguna');
+            return redirect('/login');
         }
     }
 }

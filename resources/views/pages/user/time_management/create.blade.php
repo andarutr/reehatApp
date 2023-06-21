@@ -23,7 +23,7 @@
                         <div class="tab-content" id="v-pills-tabContent">
                             <!-- instagram -->
                             <div class="tab-pane fade show active" id="v-pills-instagram" role="tabpanel" aria-labelledby="v-pills-instagram-tab">
-                                <form action="/user/time-management/create" method="POST">@csrf
+                                <form action="/user/time-management" method="POST">@csrf
                                 <div class="form-group smalls">
                                     <input type="hidden" class="form-control" name="aplikasi" value="instagram">
                                 </div>

@@ -1,4 +1,8 @@
-@extends('layouts.admin')
+@if(Auth::user()->role_id === 1)
+    @extends('layouts.admin')
+@else
+    @extends('layouts.user')
+@endif
 @section('title','My Profile')
 @section('content')
 <div class="row">

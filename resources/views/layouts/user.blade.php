@@ -5,7 +5,7 @@
     </head>
     <body>
         <div id="main-wrapper">
-			@include('partials.user.navbar')
+			<x-navbar-user/>
 			<div class="clearfix"></div>
 			<section class="gray pt-4">
 				<div class="container-fluid">

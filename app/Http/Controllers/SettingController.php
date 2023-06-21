@@ -12,11 +12,19 @@ class SettingController extends Controller
     public function index()
     {
         $email = Auth::user()->email;
-        
-        $data = [
-            'menu' => 'My Profile',
-            'user' => srv::get_where('users', 'email', $email)
-        ];
+        if(Auth::user()->role_1 === 1){
+            $data = [
+                'menu' => 'My Profile',
+                'user' => srv::get_where('users', 'email', $email)
+            ];
+        }else{
+            $data = [
+                'menu' => 'My Profile',
+                'user' => srv::get_where('users', 'email', $email),
+                'payment_count' => 1,
+                'payment_nav' => 1
+            ];
+        }
 
         return view('pages.setting.profile', $data);
     }
@@ -40,7 +48,7 @@ class SettingController extends Controller
                 'updated_at' => date('d F Y'),
             ];
 
-            $update = srv::update_where_data('users', 'email', $email, $data);
+            $update = srv::update_data('users', 'email', $email, $data);
             
             return redirect()->back();
         }else{

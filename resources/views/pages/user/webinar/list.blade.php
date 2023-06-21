@@ -20,7 +20,7 @@
                             <img src="/assets/img/webinar/{{ $webinar->thumbnail }}" class="img-fluid rounded" alt="" />
                         </div>
                         <div class="th_sety_caption">
-                            <h5>{{ $webinar->title }}</h5>
+                            <h5><a href="/user/webinar/{{ $webinar->url }}">{{ $webinar->title }}</a></h5>
                             <div class="sedi_09">{{ $webinar->mentor }}</div>
                             <p>Rp{{ number_format($webinar->cost,2,',','.') }}</p>
                             <a href="/user/pembayaran/{{ $webinar->url }}" class="them_sct active mt-4 mb-2" onclick="return confirm('Yakin ingin membeli webinar ini ?')"><i class="fas fa-home mr-1"></i>BELI</a>

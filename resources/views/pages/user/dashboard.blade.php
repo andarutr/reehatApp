@@ -46,11 +46,11 @@
                         <img src="/assets/img/webinar/{{ $webinar->thumbnail }}" class="img-fluid mr-3" width="125" />
                     </a>
                     <div class="grousp_crs_left">
-                        <div class="grousp_crs_caption"><h4>{{ $webinar->title }}</h4><br>{{ $webinar->mentor }}</div>
+                        <div class="grousp_crs_caption"><h4><a href="/user/webinar/{{ $webinar->url }}">{{ $webinar->title }}</a></h4><br>{{ $webinar->mentor }}</div>
                         <p>Rp{{ number_format($webinar->cost,2,',','.') }}</p>
                     </div>
                     <div class="grousp_crs_right">
-                        <div class="frt_but"><a href="#" class="btn text-white theme-bg">Lihat</a></div>
+                        <div class="frt_but"><a href="/user/webinar/{{ $webinar->url }}" class="btn text-white theme-bg">Lihat</a></div>
                     </div>
                 </div>
                 @endforeach

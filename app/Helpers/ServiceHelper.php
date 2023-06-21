@@ -22,10 +22,29 @@ class ServiceHelper
         return $data;
     }
 
+    public static function get_where($table, $col, $con)
+    {
+        $data = DB::table($table)
+                    ->where($col, $con)
+                    ->first();
+
+        return $data;
+    }
+
     public static function get_paginate($table, $orderBy, $paginate)
     {
         $data = DB::table($table)
                     ->orderBy('id', $orderBy)
+                    ->paginate($paginate);
+
+        return $data;
+    }
+
+    public static function get_paginate_where($table, $orderBy, $col, $con, $paginate)
+    {
+        $data = DB::table($table)
+                    ->orderBy('id', $orderBy)
+                    ->where($col, $con)
                     ->paginate($paginate);
 
         return $data;
@@ -41,20 +60,20 @@ class ServiceHelper
         return $data;
     }
 
-    public static function get_where($table, $col, $con)
-    {
-        $data = DB::table($table)
-                    ->where($col, $con)
-                    ->first();
-
-        return $data;
-    }
-
     public static function count_data($table)
     {
         $data = DB::table($table)->count();
+
         return $data;
     }
+
+    public static function count_where_data($table, $col, $con)
+	{
+        $data = DB::table($table)
+                    ->where($col, $con)
+                    ->count();
+		return $data;
+	}
 
     public static function store_data($table, $data)
     {

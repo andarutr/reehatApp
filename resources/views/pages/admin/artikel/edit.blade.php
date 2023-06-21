@@ -6,7 +6,7 @@
         <div class="dashboard_wrap">
             
             <div class="form_blocs_wrap">
-                <form action="/admin/artikel/edit/{{ $artikel->id }}" method="POST" enctype="multipart/form-data">@csrf
+                <form action="/admin/artikel/{{ $artikel->id }}" method="POST" enctype="multipart/form-data">@csrf @method('put')
                     <div class="row justify-content-between">
                         <div class="col-lg-12 col-md-7 col-sm-12">
                                 

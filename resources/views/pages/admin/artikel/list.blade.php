@@ -36,8 +36,10 @@
                                                 <i class="fas fa-ellipsis-h"></i>
                                             </a>
                                             <div class="drp-select dropdown-menu">
-                                                <a class="dropdown-item" href="/admin/artikel/edit/{{ $artikel->id }}">Edit</a>
-                                                <a class="dropdown-item" href="/admin/artikel/delete/{{ $artikel->id }}" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
+                                                <a class="dropdown-item" href="/admin/artikel/{{ $artikel->id }}/edit">Edit</a>
+                                                <form action="/admin/artikel/{{ $artikel->id }}" method="POST">@csrf @method('delete')
+                                                    <button class="dropdown-item" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </td>

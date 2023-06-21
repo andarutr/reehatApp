@@ -179,7 +179,7 @@
                                     <li><a href="/admin/webinar"><i class="fas fa-gem"></i>Webinar</a></li>
                                     <li><a href="/admin/artikel"><i class="fas fa-book"></i>Artikel</a></li>
                                     <li><a href="/admin/pembayaran"><i class="fas fa-dollar-sign"></i>Check Pembayaran</a></li>
-                                    <li><a href="/auth/logout"><i class="fa fa-unlock-alt"></i>Logout</a></li>
+                                    <li><a href="/logout"><i class="fa fa-unlock-alt"></i>Logout</a></li>
                                 </ul>
                             </div>
                         </div>

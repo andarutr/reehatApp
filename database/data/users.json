@@ -1,0 +1,56 @@
+[
+    {
+        "full_name": "Reehat System",
+        "email": "admin@domain.com",
+        "password": "$2a$12$QOYy0NNQHH7FIEYtiSyMQOJ9O2CGAis.cEZlCQ7pj8/bGUN1aqA22",
+        "picture": "user.png",
+        "role_id": "1",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "full_name": "Andaru Triadi",
+        "email": "17190668@bsi.ac.id",
+        "password": "$2a$12$QOYy0NNQHH7FIEYtiSyMQOJ9O2CGAis.cEZlCQ7pj8/bGUN1aqA22",
+        "picture": "user.png",
+        "role_id": "2",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "full_name": "Farhan Ardiansyah",
+        "email": "17190423@bsi.ac.id",
+        "password": "$2a$12$QOYy0NNQHH7FIEYtiSyMQOJ9O2CGAis.cEZlCQ7pj8/bGUN1aqA22",
+        "picture": "user.png",
+        "role_id": "2",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "full_name": "Syifa Octavia Damayanthi",
+        "email": "17190739@bsi.ac.id",
+        "password": "$2a$12$QOYy0NNQHH7FIEYtiSyMQOJ9O2CGAis.cEZlCQ7pj8/bGUN1aqA22",
+        "picture": "user.png",
+        "role_id": "2",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "full_name": "Bagus Prio Utomo",
+        "email": "17190720@bsi.ac.id",
+        "password": "$2a$12$QOYy0NNQHH7FIEYtiSyMQOJ9O2CGAis.cEZlCQ7pj8/bGUN1aqA22",
+        "picture": "user.png",
+        "role_id": "2",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "full_name": "Melda Yusnita",
+        "email": "17190471@bsi.ac.id",
+        "password": "$2a$12$QOYy0NNQHH7FIEYtiSyMQOJ9O2CGAis.cEZlCQ7pj8/bGUN1aqA22",
+        "picture": "user.png",
+        "role_id": "2",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    }
+]

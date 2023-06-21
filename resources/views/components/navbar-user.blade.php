@@ -66,7 +66,7 @@
                                         <li><a href="/user/time-management"><i class="fas fa-layer-group"></i>Time Management</a></li>
                                         <li><a href="/user/webinar"><i class="fas fa-gem"></i>Webinar</a></li>
                                         <li><a href="/user/artikel"><i class="fas fa-book"></i>Artikel</a></li>
-                                        <li><a href="/auth/logout"><i class="fa fa-unlock-alt"></i>Logout</a></li>
+                                        <li><a href="/logout"><i class="fa fa-unlock-alt"></i>Logout</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                     <li><a href="/user/time-management"><i class="fas fa-layer-group"></i>Time Management</a></li>
                                     <li><a href="/user/webinar"><i class="fas fa-gem"></i>Webinar</a></li>
                                     <li><a href="/user/artikel"><i class="fas fa-book"></i>Artikel</a></li>
-                                    <li><a href="/auth/logout"><i class="fa fa-unlock-alt"></i>Logout</a></li>
+                                    <li><a href="/logout"><i class="fa fa-unlock-alt"></i>Logout</a></li>
                                 </ul>
                             </div>
                         </div>

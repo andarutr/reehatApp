@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Mengatasi Stress Akibat Tekanan Kerja",
+        "thumbnail": "webinar_1.png",
+        "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>",
+        "mentor": "Ghassani Salsabila, S.Psi",
+        "cost": "85000",
+        "video_url": "https://www.youtube.com/embed/DGUdLn0KBms",
+        "url": "mengatasi-stress-akibat-tekanan-kerja",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "title": "Menuju Hidup Produktif Dan Sehat Mental",
+        "thumbnail": "webinar_2.png",
+        "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>",
+        "mentor": "Shabrina Fitriandari, M.Psi",
+        "cost": "85000",
+        "video_url": "https://www.youtube.com/embed/DGUdLn0KBms",
+        "url": "menuju-hidup-produktif-dan-sehat-mental",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "title": "Melatih Emosi Dan Amarahmu Sebaik Mungkin",
+        "thumbnail": "webinar_3.png",
+        "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>",
+        "mentor": "Fadhilah Eryanda, M.PSi",
+        "cost": "85000",
+        "video_url": "https://www.youtube.com/embed/DGUdLn0KBms",
+        "url": "melatih-emosi-dan-amarahmu-sebaik-mungkin",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "title": "Mengatasi Sifat Perfeksionis Dan Merubahnya Menjadi Potensi",
+        "thumbnail": "webinar_4.png",
+        "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>",
+        "mentor": "Fionna Callista, S.Psi",
+        "cost": "85000",
+        "video_url": "https://www.youtube.com/embed/DGUdLn0KBms",
+        "url": "mengatasi-sifat-perfeksionis-dan-merubahnya-menjadi-potensi",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "title": "Mengatasi Trauma Inner Child",
+        "thumbnail": "webinar_5.png",
+        "description": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>\n<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus voluptas dicta pariatur aspernatur omnis officiis aut nemo repudiandae, eius doloremque. Perferendis cumque sapiente maxime fugit dolorem neque fugiat voluptatibus?</p>",
+        "mentor": "Durah Amajida, S.Psi",
+        "cost": "85000",
+        "video_url": "https://www.youtube.com/embed/DGUdLn0KBms",
+        "url": "mengatasi-trauma-inner-child",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    }
+]

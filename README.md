@@ -14,6 +14,14 @@ Reehat App adalah Web apps yang dibuat untuk keperluan self development (pengemb
 - Admin [1]
 - User [2]
 
+## Informasi Akun
+- email: admin@domain.com | pass: reehat123
+- email: 17190668@bsi.ac.id | pass: reehat123
+- email: 17190423@bsi.ac.id | pass: reehat123
+- email: 17190739@bsi.ac.id | pass: reehat123
+- email: 17190720@bsi.ac.id | pass: reehat123
+- email: 17190471@bsi.ac.id | pass: reehat123
+  
 ## Nama Kelompok
 - Andaru Triadi (17190668) | Backend
 - Farhan Ardiansyah (17190423) | Backend

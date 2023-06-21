@@ -1,0 +1,50 @@
+[
+    {
+        "user_id": "2",
+        "aplikasi": "instagram",
+        "batas_penggunaan": "5 jam",
+        "periode": "januari - maret",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "user_id": "2",
+        "aplikasi": "youtube",
+        "batas_penggunaan": "5 jam",
+        "periode": "januari - maret",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "user_id": "2",
+        "aplikasi": "facebook",
+        "batas_penggunaan": "5 jam",
+        "periode": "januari - maret",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "user_id": "2",
+        "aplikasi": "whatsapp",
+        "batas_penggunaan": "5 jam",
+        "periode": "januari - maret",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "user_id": "2",
+        "aplikasi": "whatsapp",
+        "batas_penggunaan": "2 Jam",
+        "periode": "April - May",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    },
+    {
+        "user_id": "2",
+        "aplikasi": "tiktok",
+        "batas_penggunaan": "4 Jam",
+        "periode": "April - May",
+        "updated_at": "12 June 2022",
+        "created_at": "12 June 2022"
+    }
+]
